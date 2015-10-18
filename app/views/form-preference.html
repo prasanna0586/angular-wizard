@@ -1,0 +1,22 @@
+<!-- <label>Preference Page</label>
+<div>
+	<a ui-sref="form.personal">Next Section</a> <a ui-sref="form.userInfo">Previous Section</a>
+</div> -->
+<label>Preference Page</label><br/>
+<ng-form name = "personalInfoForm">
+<div>
+    <input type="radio" name="red" ng-model="userInfo.color" value = "red"><span></span><label for="red">Red</label>
+</div>
+
+<div>
+    <input type="radio" name="green" ng-model="userInfo.color" value = "green"><span></span><label for="green">Green</label>
+</div>
+<div>
+    <input type="radio" name="blue" ng-model="userInfo.color" value = "blue"><span></span><label for="blue">Blue</label>
+</div>
+<div>
+	<!-- <a ui-sref="form.preference">Next Section</a> -->
+	<input type = "button" ng-click="gotoUserInfoPage()" value = "Previous"></input>
+	<input type = "button" ng-click="submitPersonalInfo()" value = "Next" ng-disabled = "!(userInfo.color)"></input>
+</div>
+</ng-form>

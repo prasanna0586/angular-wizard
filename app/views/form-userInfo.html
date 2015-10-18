@@ -1,0 +1,16 @@
+<label>User Information Page</label><br/>
+<ng-form name = "userInfoForm">
+<div>
+    <label for="name">Name</label>
+    <input type="text" name="name" ng-model="userInfo.name">
+</div>
+
+<div>
+    <label for="email">Email</label>
+    <input type="text" name="email" ng-model="userInfo.email">
+</div>
+<div>
+	<!-- <a ui-sref="form.preference">Next Section</a> -->
+	<input type = "button" ng-click="submitUserInfo()" value = "Next" ng-disabled = "!(userInfo.name && userInfo.email)"></input>
+</div>
+</ng-form>

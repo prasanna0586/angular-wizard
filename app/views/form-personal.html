@@ -1,0 +1,22 @@
+<!-- <label>Personal Information Page</label>
+<div>
+	<a ui-sref="form.summary">Next Section</a>
+	<a ui-sref="form.preference">Previous Section</a>
+</div> -->
+<label>Personal Information Page</label><br/>
+<ng-form name = "userInfoForm">
+<div>
+    <label for="mobile">Mobile Number</label>
+    <input type="number" name="mobile" ng-model="userInfo.mobile">
+</div>
+
+<div>
+    <label for="dob">Date of Birth</label>
+    <input type="date" name="dob" ng-model="userInfo.dob">
+</div>
+<div>
+	<!-- <a ui-sref="form.preference">Next Section</a> -->
+	<input type = "button" ng-click="gotoPreferencePage()" value = "Previous"></input>
+	<input type = "button" ng-click="submitPersonalInfo()" value = "Next" ng-disabled = "!(userInfo.mobile && userInfo.dob)"></input>
+</div>
+</ng-form>

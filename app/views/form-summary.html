@@ -1,0 +1,21 @@
+<!-- <label>Summary Page</label><br/>
+<a ui-sref="form.personal">Previous Section</a> -->
+
+<!-- <label>Personal Information Page</label>
+<div>
+	<a ui-sref="form.summary">Next Section</a>
+	<a ui-sref="form.preference">Previous Section</a>
+</div> -->
+<label>Summary Page</label><br/>
+<div>
+	Name is {{userInfo.name}} <br/>
+	Email is {{userInfo.email}} <br/>
+	Favorite color is {{userInfo.color}} <br/>
+	Mobile number is {{userInfo.mobile}} <br/>
+	Date of Birth is {{userInfo.dob}} <br/>
+</div>
+<div>
+	<!-- <a ui-sref="form.preference">Next Section</a> -->
+	<input type = "button" ng-click="gotoPersonalInfoPage()" value = "Previous"></input>
+</div>
+</ng-form>
